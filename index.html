@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Papo & Beer</title>
 </head>
@@ -11,7 +11,7 @@
   
   <header>
     <div class="menu-container">
-      <a href="index.html"><h1>Logo</h1></a>
+      <a href="index.html">Logo</a>
       <nav class="menu">
         <ul>
           <li><a href="#beer">Home</a></li>
@@ -60,8 +60,8 @@
     </div>
   </section>
   <section class="grid-section fac" id="faq">
-    <h1>Faq</h1>
-    <dl>
+    <h1 class="titulo">Faq</h1>
+    <dl class="faq-lista">
       <dt>É chope ou cerveja?</dt>
       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iure ad distinctio, veniam sed adipisci quisquam nam illum corporis, cumque dicta. Eum deleniti eius velit.</dd>
       <dt>Quais os ingredientes da cerveja pilsen?</dt>
@@ -71,17 +71,30 @@
     </dl>
   </section>
   <section class="grid-section chope" id="chope">
-    <h1>Estilos</h1>
-    <div class="estilos">
-      <img src="img/hero_home_beer_03.jpg" alt="">
-    </div>
+      <div class="chope-lista">
+        <div class="chope-estilos">
+          <img src="img/beer_transparent_01.png" alt="">
+          <h3>Pilsen</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, accusantium?</p>
+        </div>
+        <div class="chope-estilos">
+          <img src="img/beer_transparent_02.png" alt="">
+          <h3>India Pale Ale</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, accusantium?</p>
+        </div>
+        <div class="chope-estilos">
+          <img src="img/beer_transparent_03.png" alt="">
+          <h3>America Pale Ale</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, accusantium?</p>
+        </div>
+      </div>
   </section>
   <section class="grid-section contato" id="contato">
-    <h1>Contato</h1>
+    <h1 class="titulo">Contato</h1>
     <div class="mapa">
       <img src="img/hero_home_beer_02-story-02.jpg" alt="mapa">
     </div>
-    <ul>
+    <ul class="dados">
       <li>Contato@papobeer.com.br</li>
       <li>+55 (86)9999-9999</li>
       <li>Rua do Bar, nº 21</li>
@@ -89,7 +102,25 @@
     </ul>
   </section>
   <footer class="copy">
-    <p>Todos os direitos reservados.</p>
+    <div class="container-copy">
+      <div class="copy-item">
+        <h3>About US</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil quam iusto neque ipsa quia tempore cumque necessitatibus quae a?</p>
+      </div>
+      <div class="copy-item">
+        <h3>Mestre Cervejeiro</h3>
+        <p>+348 97 999-9980</p>
+        <p>contato@papobeer.com.br</p>
+        <p>7 York St, Melboune, Australia</p>
+      </div>
+      <div class="copy-item">
+        <h3>About US</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil quam iusto neque ipsa quia tempore cumque necessitatibus quae a?</p>
+      </div>
+    </div>
+    <div class="copy-final">
+      <p>Todos os direitos reservados</p>
+    </div>
   </footer>
   <script src="js/script.js"></script>
 </body>

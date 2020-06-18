@@ -3,6 +3,16 @@ body,h1,h2,h3,ul,li,p,dd,dt,dl{
   padding: 0px;
 }
 
+:root{
+  --main-bg-color: #ffb100;
+  --secnd-color: #262527;
+  --silver-color: #e5e5e5;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --color-dark-green: #556B2F;
+  --color-green: #9ACD32;
+}
+
 img{
   display: block;
   max-width: 100%;
@@ -11,8 +21,8 @@ ul{
   list-style: none;
 }
 body{
-  background-color: #faf6ed;
-  color: #222;
+  background-color: var(--secnd-color);
+  color: var(--silver-color);
   -webkit-font-smoothing:antialiased;
   display: grid;
   grid-template-columns: 1fr minmax(300px, 800px) 1fr;
@@ -20,15 +30,18 @@ body{
 .menu-container{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 20px;
 }
 header{
   grid-column: 1/4;
   margin-bottom: 2rem;
-  background-color: #fb5;
+  background-color: var(--color-dark-green);
 }
 .menu ul{
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   padding: 10px;
 }
@@ -36,9 +49,9 @@ header{
   display: block;
   padding: 10px;
   margin-right: 10px;
-  color: #222;
+  color: var(--silver-color);
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto);
   font-weight: bold;
   text-transform: uppercase;
   font-size: .875rem;
@@ -46,21 +59,221 @@ header{
 }
 
 .grid-section{
-  grid-column: 2/4;
+  grid-column: 1/4;
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
   display: grid;
-  grid-template-columns: 100px 300px 1fr;
+  grid-template-columns: 80px 1fr 1fr;
   grid-gap: 20px;
   margin-bottom: 4rem;
 }
 
 .titulo{
-  font-family: 'Roboto', sans-serif;
-  font-size: 6rem;
+  font-family: var(--font-montserrat);
+  font-size: 4rem;
   line-height: 1;
   font-weight: 400;
   margin-bottom: 1rem;
   grid-column: 1/4;
+}
+.beer-decricao h2{
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 1rem;
+  color: var(--color-green);
+  font-weight: bolder;
+}
+.beer-decricao h2::before{
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: var(--color-dark-green);
+}
+.beer-decricao p{
+  font-family: var(--font-roboto);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.beerListas{
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.beerListas li{
+  cursor: pointer;
+}
+
+.beerListas::-webkit-scrollbar{
+  width: 18px;
+}
+.beerListas::-webkit-scrollbar-thumb{
+  background-color: var(--color-green);
+  border-left: 2px solid var(--silver-color);
+  border-right: 2px solid var(--silver-color);
+}
+
+.beerListas::-webkit-scrollbar-track{
+  background-color: var(--silver-color);
+}
+
+.beer-decricao{
+  grid-column: 3;
+}
+
+.beer-decricao section{
+  margin-bottom: 3rem;
+}
+
+.faq-lista{
+  grid-column: 2/4;
+}
+
+.chope{
+  background-image: url('../img/hero_home_beer_03.jpg');
+  background-attachment: fixed;
+  padding: 80px 0;
+}
+
+.chope-lista{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-column: 1/4;
+  text-align: center;
+}
+
+.chope-estilos{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chope-estilos h3{
+  margin-top: 10px;
+  font-family: var(--font-montserrat);
+}
+.chope-estilos p{
+  width: 300px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: var(--font-roboto);
+}
+
+.faq-lista dt{
+  font-family: var(--font-montserrat);
+  font-weight: bolder;
+  color: var(--color-green);
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+.faq-lista dt::before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: var(--color-dark-green);
+  margin-right: 10px;
+}
+
+.faq-lista dd{
+  font-family: var(--font-roboto);
+  margin-bottom: .5rem;
+  margin-left: 30px;
+  width: 70%;
+}
+
+.mapa{
+  grid-column: 2;
+}
+
+.dados{
+  grid-column: 3;
+}
+
+.dados li{
+  margin-bottom: 1rem;
+  font-family: var(--font-roboto);
+}
+
+.dados li::before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: var(--color-green);
+  margin-right: 10px;
+}
+
+.copy{
+  grid-column: 1/4;
+  padding: 100px 0;
+  background-image: url('../img/hero_footer_beer_01.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.container-copy{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.copy h3{
+  font-family: var(--font-montserrat);
+  margin-bottom: 20px;
+}
+.copy p{
+  font-family: var(--font-roboto);
+  width: 300px;
+  line-height: 2;
+}
+
+.copy-final{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-final p{
+  border-top: 1px solid #4c4c4c;
+  width: 90%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+@media (max-width: 700px){
+  body{
+    grid-template-columns: 1fr;
+  }
+  .titulo{
+    font-size: 2rem;
+  }
+
+  .menu, .grid-section, .copy{
+    grid-column: 1;
+  }
+
+  .grid-section{
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .faq-lista, .dados, .copy{
+    grid-column: 1/4;
+  }
+
 }
