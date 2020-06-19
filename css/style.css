@@ -170,6 +170,91 @@ header{
   font-family: var(--font-roboto);
 }
 
+/* Galeria container */
+
+.galeria-container{
+  background-color: var(--silver-color);
+  grid-column: 1/4;
+  padding: 80px 0;
+}
+
+.galeria-img{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img{
+  width: 370px;
+  margin: 5px;
+}
+#modal-img{
+  width: 65vw;
+  transform: scale(0);
+  transition: all linear .3s;
+}
+
+.modal_active #modal-img{
+  transform: scale(1);
+}
+
+/* Modal de imagens */
+
+.modal{
+  grid-column: 1/4;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0, .7);
+  position: fixed;
+  visibility: hidden;
+  z-index: 10;
+  opacity: 0;
+  transition: visibility 0.8s linear, opacity 0.5s linear;
+}
+.modal-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal_active{
+  visibility: visible;
+  opacity: 1;
+}
+
+#btn-close{
+  color: var(--color-green);
+  background-color: var(--secnd-color);
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  padding: 10px 15px;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid var(--color-green);
+  transition: all ease-out .4s;
+  cursor: pointer;
+}
+
+#btn-close:hover{
+  background-color: var(--color-dark-green);
+  color: var(--silver-color);
+}
+
+/* Efeito de zoo nas imagens */
+.small-img{
+  cursor: pointer;
+  transition: all linear 0.4s;
+}
+.small-img:hover{
+  filter: grayscale(90%);
+  transform: scale(1.1);
+}
+
 .faq-lista dt{
   font-family: var(--font-montserrat);
   font-weight: bolder;
@@ -226,6 +311,7 @@ header{
 
 .container-copy{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   text-align: center;
